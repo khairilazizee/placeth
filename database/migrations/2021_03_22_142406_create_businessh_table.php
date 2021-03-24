@@ -15,11 +15,16 @@ class CreateBusinesshTable extends Migration
     {
         Schema::create('businessh', function (Blueprint $table) {
             $table->id();
+            $table->integer("biz_type_id")->default(3);
             $table->string("biz_name");
             $table->string("biz_address1");
             $table->string("biz_address2");
             $table->string("biz_address3");
-            $table->int("postal");
+            $table->integer("postal");
+            $table->string("phone1");
+            $table->string("phone2");
+            $table->string("email_address");
+            $table->string("0");
             $table->timestamps();
         });
     }
