@@ -15,7 +15,7 @@ class CreateBusinesspTable extends Migration
     {
         Schema::create('businessp', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('businessh_id')->constrained();
+            $table->foreignId('businessh_id')->constrained('businessh');
             $table->string("pname_0");
             $table->string("pprice_0");
             $table->timestamps();

@@ -15,9 +15,11 @@ class CreatePeopleTable extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('name', 100)->nullable()->default('text');
-            $table->text('description')->nullable()->default('text');
+            $table->foreignId('user_id')->constrained("users")->onDelete('cascade');
+            $table->string('name', 255)->nullable()->default('text');
+            $table->string('phone')->nullable()->default('text');
+            $table->string('email');
+            $table->text('about_me')->nullable();
             $table->timestamps();
         });
     }

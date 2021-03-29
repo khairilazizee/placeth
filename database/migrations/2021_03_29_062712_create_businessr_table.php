@@ -15,8 +15,8 @@ class CreateBusinessrTable extends Migration
     {
         Schema::create('businessr', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("businessh_id")->constrained();
-            $table->foreignId("people_id")->constrained();
+            $table->foreignId("businessh_id")->constrained("businessh");
+            $table->foreignId('people_id')->constrained('people');
             $table->text("review");
             $table->integer("status"); // 0 - reviewed, 1 - approved, 2 - reject, 3 - delete
             $table->string("reject_reason"); 
