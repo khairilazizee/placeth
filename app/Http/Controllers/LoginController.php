@@ -11,4 +11,15 @@ class LoginController extends Controller
         return view('form.login');
 
     }
+
+    public function create(Request $request){
+
+        $data = $request->validate([
+            "username" => $request->username,
+            "password" => $request->password
+        ]);
+
+
+
+    }
 }

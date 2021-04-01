@@ -6,13 +6,13 @@
         <div class="flex flex-col-h align-middle">
             <div class="w-4/12 mx-auto px-6 py-5 bg-white rounded-lg shadow-lg">
                 <h2 class="font-bold text-center text-3xl text-gray-800">Login</h2>
-                <form action="" method="post" class="mt-10">
+                <form action="{{ url('login') }}" method="post" class="mt-10">
                     @csrf
                     <label for="" class="block mt-10 font-semibold uppercase text-xs">E-mail</label>
-                    <input type="text" class="block w-full border-b-2 py-3 px-1 mt-4 appearance-none border-gray-100" placeholder="E-mail address">
+                    <input type="text" name="email" id="email" class="block w-full border-b-2 py-3 px-1 mt-4 appearance-none border-gray-100" placeholder="E-mail address">
 
                     <label for="" class="block mt-10 font-semibold uppercase text-xs">Password</label>
-                    <input type="password" class="block w-full border-b-2 py-3 px-1 mt-4 appearance-none border-gray-100" placeholder="Password">
+                    <input type="password" name="password" id="password" class="block w-full border-b-2 py-3 px-1 mt-4 appearance-none border-gray-100" placeholder="Password">
 
                     <button class="w-full mt-10 py-3 bg-blue-500 text-white hover:bg-blue-700">Log In</button>
 
@@ -25,7 +25,7 @@
                             or
                         </p>
             
-                        <a href="register" class="flex-2 underline">
+                        <a href="{{ url('register') }}" class="flex-2 underline">
                             Create an Account
                         </a>
                     </div>
