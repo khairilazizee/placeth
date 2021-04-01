@@ -11,8 +11,20 @@
                     <label for="" class="block mt-10 font-semibold uppercase text-xs">E-mail</label>
                     <input type="text" name="email" id="email" class="block w-full border-b-2 py-3 px-1 mt-4 appearance-none border-gray-100" placeholder="E-mail address">
 
+                    @error('email')
+                        <div class="text-red-500 text-sm mt-2">
+                            {{ $message }}
+                        </div>
+                    @enderror
+
                     <label for="" class="block mt-10 font-semibold uppercase text-xs">Password</label>
                     <input type="password" name="password" id="password" class="block w-full border-b-2 py-3 px-1 mt-4 appearance-none border-gray-100" placeholder="Password">
+
+                    @error('password')
+                        <div class="text-red-500 text-sm mt-2">
+                            {{ $message }}
+                        </div>
+                    @enderror
 
                     <button class="w-full mt-10 py-3 bg-blue-500 text-white hover:bg-blue-700">Log In</button>
 
