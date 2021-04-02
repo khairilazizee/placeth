@@ -10,7 +10,7 @@
                 <form action="{{ url('register') }}" method="post" class="mt-10">
                     @csrf
                     <label for="" class="block mt-10 font-semibold uppercase text-xs">E-mail</label>
-                    <input type="text" name="email" id="email" class="block w-full border-b-2 py-3 px-1 mt-4 appearance-none border-gray-100" placeholder="Your E-mail address">
+                    <input type="text" name="email" id="email" class="block w-full border-b-2 py-3 px-1 mt-4 appearance-none border-gray-100" placeholder="Your E-mail address" value="{{ old('email') }}">
 
                     @error('email')
                         <div class="text-red-500 text-sm mt-2">
@@ -19,7 +19,7 @@
                     @enderror
 
                     <label for="" class="block mt-10 font-semibold uppercase text-xs">Name</label>
-                    <input type="text" name="name" id="name" class="block w-full border-b-2 py-3 px-1 mt-4 appearance-none border-gray-100" placeholder="What should we call you?">
+                    <input type="text" name="name" id="name" class="block w-full border-b-2 py-3 px-1 mt-4 appearance-none border-gray-100" placeholder="What should we call you?" value="{{ old('name') }}">
 
                     @error('name')
                         <div class="text-red-500 text-sm mt-2">

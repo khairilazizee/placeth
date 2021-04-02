@@ -5,6 +5,11 @@
     <div class="container mx-auto px-5 py-24 h-screen">
         <div class="flex flex-col-h align-middle">
             <div class="w-4/12 mx-auto px-6 py-5 bg-white rounded-lg shadow-lg">
+                @if(session('status'))
+                <div class="px-3 py-2 bg-red-300 font-semibold w-full">
+                    {{ session('status') }}
+                </div>
+                @endif
                 <h2 class="font-bold text-center text-3xl text-gray-800">Login</h2>
                 <form action="{{ url('login') }}" method="post" class="mt-10">
                     @csrf
@@ -25,6 +30,9 @@
                             {{ $message }}
                         </div>
                     @enderror
+
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="">Remember me</label>
 
                     <button class="w-full mt-10 py-3 bg-blue-500 text-white hover:bg-blue-700">Log In</button>
 
