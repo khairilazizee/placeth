@@ -6,7 +6,7 @@
         <div class="flex flex-col-h align-middle">
             <div class="w-4/12 mx-auto px-6 py-5 bg-white rounded-lg shadow-lg">
                 @if(session('status'))
-                <div class="px-3 py-2 bg-red-300 font-semibold w-full">
+                <div class="px-3 py-2 bg-red-100 font-semibold w-full rounded">
                     {{ session('status') }}
                 </div>
                 @endif
