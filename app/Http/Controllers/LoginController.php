@@ -30,9 +30,15 @@ class LoginController extends Controller
 
                 Auth::login($row, $request->remember);
 
-                session(["access"=>1,"email"=>$request->email,"name"=>$row->name]);
+                session(["access"=>1,"email"=>$request->email,"name"=>$row->name, "role"=>$row->role]);
 
-                return redirect("dashboard");
+                if($row->role==99){
+                    return redirect("dashboard");
+                } else {
+                    return redirect("/");
+                }
+
+                
             } else {
                 return redirect("login")->with(["status"=>"Access Denied."]);
             }
