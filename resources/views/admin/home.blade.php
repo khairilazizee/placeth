@@ -4,7 +4,7 @@
 
 @include('admin.topbar')
 
-<div class="w-full h-screen bg-gray-50">
+<div class="w-full h-screen bg-gray-200">
 <section class="text-gray-600">
     <div class="container px-5 py-24 mx-auto">
         <div class="grid grid-cols-4 -m-4 gap-1">
