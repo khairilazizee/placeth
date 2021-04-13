@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBusinesspTable extends Migration
+class CreateBusinessTypeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateBusinesspTable extends Migration
      */
     public function up()
     {
-        Schema::create('businessp', function (Blueprint $table) {
+        Schema::create('business_type', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('businessh_id')->constrained('businessh');
-            $table->string("pname_0");
-            $table->string("pprice_0");
+            $table->string("business_type_description");
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateBusinesspTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('businessp');
+        Schema::dropIfExists('business_type');
     }
 }

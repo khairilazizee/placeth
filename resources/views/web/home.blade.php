@@ -14,12 +14,11 @@
             </form>
             <div class="m-3 float-right"><a href="{{ url("advanced-search") }}">Advanced Search</a></div>
         </div>
-      <div class="flex flex-wrap w-full mb-20">
-        <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Pitchfork Kickstarter Taxidermy</h1>
+      <div class="flex flex-wrap w-full mb-5">
+        <div class="w-full mb-6 lg:mb-0">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Businesses</h1>
           <div class="h-1 w-20 bg-indigo-500 rounded"></div>
         </div>
-        <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
       </div>
       <div class="flex flex-wrap -m-4">
         <div class="xl:w-1/4 md:w-1/2 p-4">
@@ -54,6 +53,9 @@
             <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
           </div>
         </div>
+      </div>
+      <div class="w-full mt-5 bg-gray-50 text-center">
+        <button class="px-3 py-2 bg-red-700 text-white rounded hover:bg-red-500">More Businesses</button>
       </div>
     </div>
   </section>
