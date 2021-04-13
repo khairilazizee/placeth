@@ -30,6 +30,10 @@ Route::post('/register', [RegisterController::class, 'create']);
 Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index']);
 
+    Route::prefix('admin')->group(function() {
+        Route::get('');
+    });
+
     Route::get('logout', [LogoutController::class, 'index']);
 });
 
