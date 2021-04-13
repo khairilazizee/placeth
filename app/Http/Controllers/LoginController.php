@@ -36,7 +36,7 @@ class LoginController extends Controller
                 session(["access"=>1,"email"=>$request->email,"name"=>$row->name, "role"=>$row->role]);
 
                 if($row->role==99){
-                    return redirect("dashboard");
+                    return redirect("admin");
                 } else {
                     return redirect("/");
                 }
