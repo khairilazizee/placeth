@@ -11,11 +11,24 @@
         {{-- <a class="mr-5 text-gray-900 hover:text-gray-600">Second Link</a> --}}
         <a class="mr-5 text-gray-900 hover:text-gray-600">About us</a>
         <a class="mr-5 text-gray-900 hover:text-gray-600">Register Business</a>
+        @auth
+            <a href="" class="mr-5 text-gray-900 hover:text-gray-600">My Dashboard</a>
+        @endauth
       </nav>
-      <button class="inline-flex items-center text-white bg-gray-500 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 hover:text-black rounded text-base md:mt-0" onclick="location.href='{{ url('login') }}'">Login
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-          <path d="M5 12h14M12 5l7 7-7 7"></path>
-        </svg>
-      </button>
+      @auth
+        <button class="inline-flex items-center text-white bg-gray-500 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 hover:text-black rounded text-base md:mt-0" onclick="location.href='{{ url('logout') }}'">Logout
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      @endauth
+      @guest
+        <button class="inline-flex items-center text-white bg-gray-500 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 hover:text-black rounded text-base md:mt-0" onclick="location.href='{{ url('login') }}'">Login
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      @endguest
+      
     </div>
   </header>
